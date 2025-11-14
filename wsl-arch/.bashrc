@@ -30,6 +30,16 @@ PS1='\w\$ '
 eval $(ssh-agent)
 ssh-add ~/.ssh/gitlab_job_ed25519
 
+function sj () {
+    eval $(ssh-agent)
+    ssh-add ~/.ssh/gitlab_job_ed25519
+}
+
+function sg () {
+    eval $(ssh-agent)
+    ssh-add ~/.ssh/github_ed25519
+}
+
 # fnm
 FNM_PATH="/home/koray/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
